@@ -14,8 +14,10 @@ class QuestionModelTests(TestCase):
         is in the future.
         """
         time = timezone.now() + datetime.timedelta(days=30)
+        dayday = timezone.now()
         future_question = Question(pub_date=time)
         self.assertIs(future_question.was_published_recently(), False)
+        #test on git push
 
     def test_was_published_recently_with_old_question(self):
         """
