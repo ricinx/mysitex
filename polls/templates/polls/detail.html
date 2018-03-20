@@ -1,5 +1,6 @@
+{% load static from staticfiles %}
 <h1>{{ question.question_text }}</h1>
-
+<script type="text/javascript" src="{% static "js/js_click.js" %}"></script>
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 <form action="{% url 'polls:vote' question.id %}" method="post">
@@ -7,11 +8,7 @@
 {% for choice in question.choice_set.all %}
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" onclick="myFunction()"/>
     <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
-    <script>
-      function myFunction() {
-        alert("Hello! I am an alert box!");
-      }
-    </script>
+
 {% endfor %}
 <input type="submit" value="Vote" />
 </form>
