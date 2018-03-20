@@ -13,6 +13,7 @@ from django.core.wsgi import get_wsgi_application
 
 sys.path.append('/Users/floshin33/DjangoProject/mysitex')
 sys.path.append('/Users/floshin33/DjangoProject/mysitex/mysitex')
+sys.path.append('C:/Users/robin/Bitnami Django Stack projects/mysitex')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysitex.settings")
 
 application = get_wsgi_application()

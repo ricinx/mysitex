@@ -1,7 +1,13 @@
+.container {
+    background: #eac656;
+    margin: 10 10 10 10;
+    border: 3px solid black;
+}
 li a {
     color: green;
 }
 
-body {
-    background: white url("images/background.gif") no-repeat;
+body
+{
+background-color: red;
 }
